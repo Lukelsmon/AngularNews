@@ -1,9 +1,11 @@
-# 📰 Portal de Notícias PWA - Angular
+# 📰 Web App de Notícias Personalizadas com Angular
 
 Este é um projeto de um Portal de Notícias dinâmico desenvolvido em **Angular**, integrado com a **NewsAPI** para exibição de conteúdos informativos em tempo real totalmente em Português (Brasil).
 
 ## 🚀 Funcionalidades Principais
 - **Feed por Categorias:** Abas dinâmicas que buscam notícias sobre Tecnologia, Esportes, Geral, Negócios, etc.
+- **Autenticação de Usuário e Personalização:** O sistema conta com um módulo completo de Login e Cadastro para personalização da experiência
+- **Interface do Usuário:** A interface foi projetada seguindo as melhores práticas de Design Responsivo e componentização do Angular:
 - **Detalhamento de Notícias:** Página dedicada para leitura aprofundada da matéria selecionada.
 - **Gerenciamento de Favoritos:** Opção de favoritar / salvar notícias de interesse e visualizá-las de forma organizada na página de Perfil do Usuário
 - **Armazenamento Local (Cache):** Desempenho otimizado e modo offline utilizando `LocalStorage`.
@@ -15,6 +17,9 @@ Este é um projeto de um Portal de Notícias dinâmico desenvolvido em **Angular
 - **TypeScript**
 - **HTML5 & CSS3**
 - **NewsAPI** (Serviço de busca de notícias globais)
+- **Sistema de Notificações Web (Push Alerts)**
+- **LocalStorage**
+- **Toda a inteligência de autenticação e armazenamento foi feita de forma 100% local, rodando direto no próprio navegador do usuário (Client-Side).**
 
 ## 🔧 Como Executar o Projeto
 
