@@ -9,7 +9,7 @@ Este é um projeto de um Portal de Notícias dinâmico desenvolvido em **Angular
 - **Detalhamento de Notícias:** Página dedicada para leitura aprofundada da matéria selecionada.
 - **Gerenciamento de Favoritos:** Opção de favoritar / salvar notícias de interesse e visualizá-las de forma organizada na página de Perfil do Usuário
 - **Armazenamento Local (Cache):** Desempenho otimizado e modo offline utilizando `LocalStorage`.
-- **Notificações Push:** Avisos nativos no navegador quando novas notícias são carregadas.
+- **Notificações Push:** implementação utilizando a **Web Notifications API** nativa. Como o escopo principal do projeto foca em uma aplicação Web de alta performance (Single Page Application) executada em navegadores, a API nativa oferece uma integração mais limpa.
 - **Responsivo:** Layout adaptado para leitura em computadores e dispositivos móveis através do navegador Firefox no Lubuntu.
 
 ## 🛠️ Tecnologias Utilizadas
