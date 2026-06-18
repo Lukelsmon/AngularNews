@@ -36,3 +36,29 @@ Este é um projeto de um Portal de Notícias dinâmico desenvolvido em **Angular
 5. Feito isso, você vai poder acessar o seguinte endereço:
    ```bash
    http://localhost:4200      
+
+<div class="login_auth / app angular">
+  <p>Esta é a página de Login pedindo a verificação para preencher todos os campos!</p>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2d3b0c2-506e-4407-a730-2ac1229cb564" />
+</div>
+
+----
+
+<div class="register_auth / app angular">
+  <p>Esta é a página de Registrar sua conta, caso não possua!</p>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1566f350-55fe-425e-878a-c702444ea492" />
+</div>
+
+----
+
+<div class="home_notifications / app angular">
+  <p>Esta é a página Home (principal) onde a mágica acontece, onde você pode ver as noticias, ir para o site principal das noticias em "Ler mais" e favoritar alguma noticia e também receber as notificacoes das noticias que foram atualizadas.</p>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06295e57-a744-4b8d-9e8a-aeb5ea756aea" />
+</div>
+
+----
+
+<div class="profile_favorites_news / app angular">
+  <p>E esta é página de seu perfil, onde pode visualizar as noticias que foram favoritas</p>
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b31038a1-2f7a-41a8-b26e-da0daed84085" />
+</div>
