@@ -37,6 +37,8 @@ Este é um projeto de um Portal de Notícias dinâmico desenvolvido em **Angular
    ```bash
    http://localhost:4200      
 
+## Prints do projeto Web Angular: 
+
 <div class="login_auth / app angular">
   <p>Esta é a página de Login pedindo a verificação para preencher todos os campos!</p>
   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2d3b0c2-506e-4407-a730-2ac1229cb564" />
