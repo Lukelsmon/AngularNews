@@ -1,0 +1,45 @@
+<div class="profile-container">
+    
+    <header class="profile-header">
+        <button class="btn-back" routerLink="/home">Voltar para a Home</button>
+        <button class="btn-logout" (click)="logout()">Sair do Sistema</button>
+    </header>
+
+    <section class="user-card" *ngIf="currentUser">
+        <div class="avatar">
+            {{ currentUser.name ? currentUser.name.charAt(0).toUpperCase() : 'U' }}
+        </div>
+        <div class="user-info">
+            <h2>Olá, {{ currentUser.name }}!</h2>
+            <p>E-mail: {{ currentUser.email }}</p>
+        </div>
+    </section>
+
+    <section class="favorites-section">
+        <h3>Suas Notícias Favoritadas ({{ favoriteArticles.length }})</h3>
+
+        <div *ngIf="favoriteArticles.length === 0" class="empty-favorites">
+            <p>Sua lista de favoritos está vazia.</p>
+            <a routerLink="/home" class="btn-go-home">Ver Notícias da Home</a>
+        </div>
+
+        <div class="news-grid" *ngIf="favoriteArticles.length > 0">
+            <div class="news-card" *ngFor="let article of favoriteArticles">
+                <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="Capa da notícia">
+
+                <div class="news-content">
+                    <span class="source-tag">{{ article.source?.name }}</span>
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.description }}</p>
+                    
+                    <div class="actions">
+                        <button class="btn-remove" (click)="removeFavorite(article.title)">
+                            Remover dos Favoritos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

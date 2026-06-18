@@ -1,0 +1,29 @@
+<div class="detail-container" *ngIf="article">
+    
+    <header class="detail-header">
+        <button class="btn-back" routerLink="/home">← Voltar para o Portal</button>
+    </header>
+
+    <article class="article-content">
+        <span class="source-badge">{{ article.source?.name }}</span>
+        <h1>{{ article.title }}</h1>
+        <p class="author-date" *ngIf="article.author">Por: {{ article.author }}</p>
+
+        <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="Imagem principal da notícia">
+
+        <div class="full-text">
+            <div class="description">
+                <strong>Resumo:</strong> {{ article.description }}
+            </div>
+            <p class="content-text">
+                {{ article.content || 'O conteúdo completo e aprofundado desta matéria está reservado para assinantes do veículo de imprensa oficial.' }}
+            </p>
+        </div>
+
+        <div class="external-action">
+            <a [href]="article.url" target="_blank" class="btn-external">
+                Ler matéria completa na fonte oficial 🌐
+            </a>
+        </div>
+    </article>
+</div>

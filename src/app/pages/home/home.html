@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Bem vindo ao Portal de Notícias!</h1>
+    <button class="btn-profile-shortcut" routerLink="/profile">Meu Perfil</button>
+
+    <!-- Filtros de categorias -->
+    <div class="filters">
+        <button *ngFor="let cat of categories" (click)="loadNews(cat)" [class.active]="cat === selectedCategory">
+            {{ cat | titlecase }}
+        </button>
+    </div>
+
+    <!-- Mensagem de Carregando (Trata o estado da variável loading) -->
+    <div *ngIf="loading" class="loading-spinner">
+        <p>Carregando notícias... Por favor, aguarde.</p>
+    </div>
+
+    <!-- Mensagem de Erro -->
+    <div *ngIf="errorMessage" class="error-alert">
+        {{ errorMessage }}
+    </div>
+
+    <!-- Grid de Notícias (Só exibe se não estiver carregando) -->
+    <div class="news-grid" *ngIf="!loading && articles.length > 0">
+        <div class="news-card" *ngFor="let article of articles">
+            <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="Imagem da notícia">
+
+            <div class="news-content">
+                <span class="source-tag">{{ article.source.name }}</span>
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.description }}</p>
+                <div class="actions">
+                    <button class="btn-read" (click)="goToDetail(article)">Ler mais</button>
+                    <!-- Dinâmico: Mostra se já está favoritado ou não -->
+                    <button class="btn-favorite" (click)="toggleFavorite(article.title)">
+                        {{ isFavorite(article.title) ? '★ Remover' : '☆ Favoritar' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nenhuma notícia encontrada -->
+    <div *ngIf="!loading && articles.length === 0 && !errorMessage" class="no-news">
+        Perdão, porém, nenhuma notícia foi encontrada para esta categoria.
+    </div>
+</div>

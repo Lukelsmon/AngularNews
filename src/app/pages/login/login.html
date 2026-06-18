@@ -1,0 +1,28 @@
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>Acessar o Portal</h2>
+        <p>Insira suas credenciais para continuar.</p>
+
+        <div *ngIf="errorMessage" class="error-alert">
+            {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="OnLogin()">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" [(ngModel)]="credentials.email" placeholder="Seu e-mail cadastrado">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" [(ngModel)]="credentials.password" placeholder="Sua senha">
+            </div>
+
+            <button type="submit" class="btn-auth">Entrar</button>
+        </form>
+
+        <p class="auth-redirect">
+            Não tem uma conta? <a routerLink="/register">Cadastre-se aqui</a>
+        </p>
+    </div>
+</div>
